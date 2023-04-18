@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kk_simple.ACExtActivity">
+
+    <Button
+        android:id="@+id/btn_sleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="睡眠"
+        android:enabled="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_timing_op" />
+
+    <Button
+        android:id="@+id/btn_timing_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="定时"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        app:layout_constraintTop_toTopOf="@id/btn_timing_op"
+        app:layout_constraintBottom_toBottomOf="@id/btn_timing_op"
+        app:layout_constraintLeft_toRightOf="@id/btn_timing_op"
+        android:layout_width="wrap_content"
+        android:text="+"
+        android:id="@+id/btn_timing_add"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/btn_timing_op"
+        app:layout_constraintBottom_toBottomOf="@id/btn_timing_op"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toRightOf="@id/btn_timing_add"
+       android:id="@+id/tv_timing_display"
+        android:layout_height="wrap_content"/>
+    <Button
+        app:layout_constraintTop_toTopOf="@id/btn_timing_op"
+        app:layout_constraintBottom_toBottomOf="@id/btn_timing_op"
+        app:layout_constraintLeft_toRightOf="@id/tv_timing_display"
+        android:layout_width="wrap_content"
+        android:text="-"
+        android:id="@+id/btn_timing_minus"
+        android:layout_height="wrap_content"/>
+    <GridView
+        android:id="@+id/gv"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_marginTop="20dp"
+        android:numColumns="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_sleep" />
+</android.support.constraint.ConstraintLayout>

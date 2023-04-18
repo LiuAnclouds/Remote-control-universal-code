@@ -1,0 +1,16 @@
+﻿**************************************************************************
+                                                                        
+                       Telink SDK Patch List                              
+                                                                            
+                                                                        
+**************************************************************************
+# 0002_20210428_Support_zb_flash_optimize_ota_process
+   - Support ZB Flash
+   - Calibrate the flash vref according to the reading from flash 
+   - Shorten the time to write flash when use zb flash in ota mode, improve the efficiency of ota
+   - This patch support telink_vulture_ble_sdk_v1.1.1 and telink_vulture_ble_sdk_v1.1.0
+driver:仓库地址：git@192.168.48.36:src/driver/telink_b85m_driver_src.git（master分支SHA：SHA:2ccdd725b70024a5eda22a4fe48f3180b4e23e3c
+vulture_sdk_multimode:git@192.168.48.36:sdk_app/ble/telink_vulture_ble_single_connection_sdk.git(master 分支SHA-1: aa1dbc2ac7e2e5c09d8cbbb1433b3d8a98118164)
+ 
+
+

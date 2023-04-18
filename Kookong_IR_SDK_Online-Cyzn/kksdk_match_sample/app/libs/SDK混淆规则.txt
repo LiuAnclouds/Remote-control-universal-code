@@ -1,0 +1,7 @@
+﻿
+-dontwarn com.lidroid.xutils.**
+-dontwarn com.kookong.app.data.FunctionList
+-dontwarn com.kookong.app.service.**
+
+
+com.kookong 下的包都不要混淆 我们已经混淆过了

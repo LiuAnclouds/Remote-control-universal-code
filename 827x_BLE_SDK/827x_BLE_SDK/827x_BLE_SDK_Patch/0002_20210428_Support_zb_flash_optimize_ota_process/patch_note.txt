@@ -1,0 +1,8 @@
+**************************************************************************
+                                                                        
+                       Telink SDK Patch Note                              
+                                                                            
+                                                                        
+**************************************************************************
+patch note:
+- the floder of 827x_ble_sdk_v1.1.1_patch include bug fix based on vulture_ble_sdk_v1.1.1/vulture_ble_sdk_v1.1.0, if you want to use vulture BLE SDK v1.1.1, please read this patch note firstly and fix SDK file according to note.

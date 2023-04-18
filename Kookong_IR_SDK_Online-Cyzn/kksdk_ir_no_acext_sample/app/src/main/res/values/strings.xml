@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">kk-sdk-simple-lite</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <!-- air conditioner commonds -->
+    <string name="ac_commands_model">模式</string>
+    <string name="ac_commands_power">电源</string>
+    <string name="ac_commands_sweep_wind">扫风</string>
+    <string name="ac_commands_warm_wind">制热</string>
+    <string name="ac_commands_cold_wind">制冷</string>
+    <string name="ac_commands_temperature">温度</string>
+    <string name="ac_commands_wind_sppd">风量</string>
+    <string name="ac_commands_put_wind">风向</string>
+    <string name="ac_commands_timing">定时</string>
+    <string name="ac_commands_sleep">睡眠</string>
+    <string name="ac_commands_16">16度</string>
+    <string name="ac_commands_25">25度</string>
+    <string name="ac_commands_timing_on">定时开</string>
+	<string name="ac_commands_timing_off">定时关</string>
+	
+    <!-- air conditioner state -->
+    <string name="ac_state_model_cool">制冷</string>
+    <string name="ac_state_model_heat">制热</string>
+    <string name="ac_state_auto">自动</string>
+    <string name="ac_state_model_fan">送风</string>
+    <string name="ac_state_model_dry">除湿</string>
+    <string name="ac_state_speed_low">低风</string>
+    <string name="ac_state_speed_medium">中风</string>
+    <string name="ac_state_speed_high">高风</string>
+    <string name="ac_state_speed_auto">自动风量</string>
+    <string name="ac_state_ud_direct"> 风向1</string>
+    
+    <string name="set_timeing_time_tip">将会在%1$s%2$s您的空调</string>
+
+    <!-- ac sharedpreference statename -->
+    <string name="ac_local_state_name">ac_local_state_%1$d</string>
+    <string name="detail_stills_num">(%1$d)</string>
+    <string name="cn_message_clear">清空</string>
+    <string name="other_user_fav_program"> %1$s喜欢的节目</string>
+    <string name="other_user_fav_channel"> %1$s收藏的频道</string>
+    <string name="tvwall_toast_send_ir_notic_head">频道表有错误，请去</string>
+    <string name="tvwall_toast_send_ir_notic_center">编辑频道表</string>
+    <string name="tvwall_toast_send_ir_notic_end">中去修改。</string>
+    <string name="feed_back_info">太可耻了！酷控君竟然没有收集您家的型号。\n没关系！立刻联系酷控君为您家添加</string>
+    <string name="help_pannel_user">PM要被（tai）扣（gao）工（xing）资了\n酷控君在线热情期盼为您解决问题</string>
+    <string name="save_channel_info">酷控官方还不支持您所在城市的频道表，协助酷控完善您本市的频道表，可以获得50元奖励。同时您本市的所有用户都会感谢您的贡献善莫大焉 ！！！</string>
+
+</resources>

@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 头部获取红外数据 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/ac_edit_rid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="2607" >
+            </EditText>
+
+            <Button
+                android:id="@+id/ac_search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="获取数据" />
+        </LinearLayout>
+
+        <!-- 遥控器面板 -->
+
+        <LinearLayout
+            android:id="@+id/ac_pannel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/ac_remoter_screen"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:background="#999"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="115dp" >
+
+                        <TextView
+                            android:id="@+id/ac_state_model"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingBottom="25dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="25dp"
+                            android:paddingTop="25dp"
+                            android:textColor="@android:color/white"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/ac_screen_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="48dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#99FFFFFF"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp" >
+
+                        <RelativeLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" >
+
+                            <TextView
+                                android:id="@+id/ac_state_wind_auto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:textColor="@android:color/white"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" >
+
+                            <TextView
+                                android:id="@+id/ac_state_wind"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:textColor="@android:color/white"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" >
+
+                            <TextView
+                                android:id="@+id/ac_state_wind_speed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:padding="2dp"
+                                android:text="高风"
+                                android:textColor="#FFF"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:id="@+id/ac_dragree_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="115dp" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/ac_state_degree"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_toRightOf="@+id/ac_state_degree"
+                            android:src="@drawable/ic_launcher"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/ac_state_degree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="20"
+                            android:textColor="@android:color/white"
+                            android:textSize="90dp"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp" >
+
+                            <TextView
+                                android:id="@+id/ac_state_timing"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:textColor="@android:color/white"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp" >
+
+                            <TextView
+                                android:id="@+id/ac_state_sleep"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:textColor="@android:color/white"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/ac_command_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:tag="sts_model"
+                        android:text="@string/ac_commands_model"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/ac_command_power"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:tag="sts_power"
+                        android:text="@string/ac_commands_power"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/ac_command_sweep_wind"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:tag="sts_sweep_wind"
+                        android:text="@string/ac_commands_sweep_wind"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/ac_command_warm"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:tag="sts_hot"
+                        android:text="@string/ac_commands_warm_wind"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/ac_command_heat_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:scaleType="center"
+                        android:tag="sts_tmp_plus"
+                        android:text="+"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/ac_command_wind_direct"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:tag="sts_wind_direction"
+                        android:text="@string/ac_commands_put_wind"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/ac_commands_temperature"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/ac_command_cold"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:tag="sts_cold"
+                        android:text="@string/ac_commands_cold_wind"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/ac_command_heat_down"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:scaleType="center"
+                        android:tag="sts_tmp_minus"
+                        android:text="-"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/ac_command_wind_speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:tag="sts_wind_speed"
+                        android:text="@string/ac_commands_wind_sppd"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/ac_command_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:tag="sts_cold"
+                    android:text="@string/ac_commands_16"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/ac_command_25"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:tag="sts_wind_speed"
+                    android:text="@string/ac_commands_25"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/ac_command_speed_auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:tag="sts_cold"
+                    android:text="@string/ac_state_speed_auto"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/ac_command_speed_low"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:tag="sts_wind_speed"
+                    android:text="@string/ac_state_speed_low"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/ac_command_ud_direct"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:tag="sts_cold"
+                    android:text="@string/ac_state_ud_direct"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+
+                 <TextView
+                    android:id="@+id/ac_command_min_temp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:tag="sts_cold"
+                    android:text="最低温度"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+
+                 <TextView
+                    android:id="@+id/ac_command_max_temp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:tag="sts_cold"
+                    android:text="最高温度"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
