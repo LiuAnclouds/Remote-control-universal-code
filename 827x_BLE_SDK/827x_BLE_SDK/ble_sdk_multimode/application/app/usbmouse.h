@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2023-04-28 18:08:39
+ * @LastEditTime: 2023-04-28 18:08:55
+ * @LastEditors: 暗夜精灵8
+ * @Description: In User Settings Edit
+ * @FilePath: /ble_sdk_multimode/application/app/usbmouse.h
+ */
 /********************************************************************************************************
  * @file     usbmouse.h 
  *
@@ -34,8 +42,9 @@
 	extern "C" {
 #endif
 
-
+//鼠标报告数据长度
 #define MOUSE_REPORT_DATA_LEN     (sizeof(mouse_data_t))
+//媒体报告数据长度
 #define MEDIA_REPORT_DATA_LEN		4
 int usbmouse_hid_report(u8 report_id, u8 *data, int cnt);
 

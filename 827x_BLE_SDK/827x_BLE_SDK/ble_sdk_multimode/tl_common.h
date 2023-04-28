@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2023-03-26 22:54:16
+ * @LastEditTime: 2023-04-23 22:56:52
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /ble_sdk_multimode/tl_common.h
+ */
 /********************************************************************************************************
  * @file     tl_common.h
  *

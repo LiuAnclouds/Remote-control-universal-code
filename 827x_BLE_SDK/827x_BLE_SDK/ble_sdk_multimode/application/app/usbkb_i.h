@@ -46,6 +46,8 @@ static inline u16 usbkb_get_report_desc_size(void) {
 }
 
 #if (AUDIO_HOGP)
+/// @brief 
+///该段代码定义了以个长度为20的HID报告符，描述了一个数据初入的格式
 static const USB_Descriptor_HIDReport_Datatype_t audio_hogp_report_desc[] = {
 
 	    0x06, 0x01, 0xFF,  // Usage Page (Vendor Defined 0xFF01)
@@ -116,16 +118,34 @@ static const USB_Descriptor_HIDReport_Datatype_t vendor_report_desc[] = {
 
 };
 
+/// @brief 
+/// @param  
+/// @return 
+///获取audio报告命令
 static inline u8* usbaudio_hogp_get_report_desc(void) {
 	return (u8*) (audio_hogp_report_desc);
 }
+
+/// @brief 
+/// @param  
+/// @return 
+///获取audio报告大小
 static inline u16 usbaudio_hogp_get_report_desc_size(void) {
 	return sizeof(audio_hogp_report_desc);
 }
 
+/// @brief 
+/// @param  
+/// @return 
+///获取vendor报告命令
 static inline u8* usb_vendor_get_report_desc(void) {
 	return (u8*) (vendor_report_desc);
 }
+
+/// @brief 
+/// @param  
+/// @return 
+///获取vendor报告大小
 static inline u16 usb_vendor_get_report_desc_size(void) {
 	return sizeof(vendor_report_desc);
 }

@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2023-04-25 22:53:33
+ * @LastEditTime: 2023-04-27 10:05:36
+ * @LastEditors: 暗夜精灵8
+ * @Description: In User Settings Edit
+ * @FilePath: /ble_sdk_multimode/application/app/usbcdc.h
+ */
 /********************************************************************************************************
  * @file     usbcdc.h 
  *
@@ -28,22 +36,31 @@
 #include "../common/bit.h"
 
 /* Enable C linkage for C++ Compilers: */
+//如果未C++环境，C扩展
 #if defined(__cplusplus)
     extern "C" {
 #endif
 
-
+//函数结构体指针
+//用于定义CDC设备发送数据时的回调函数，
+//该函数用于在数据发送完成后进行一些处理工作
 typedef void ( *cdc_handlerFn_t)( u8* pData);
 
+/// @brief 
+///结构体类型，用于定义CDC设备发送数据时的缓冲区
 typedef struct {
-    u8 len;
-    u8 data[1];
+    u8 len;//需要发送数据的长度
+    u8 data[1];//需要发送缓冲区的数据
 } usbcdc_txBuf_t;
 
 
+/// @brief 
+///枚举类型。表示CDC设备发送数据时的状态
 typedef enum usbcdc_sts_e {
     // success = 0
+    //表示缓冲区忙碌
     USB_BUSY = 1,
+    //表示多块数据发送
     USB_MULTIBLOCK,
 } usbcdc_sts_t;
 

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "hidclasscommon.h": "c",
+        "tl_common.h": "c"
+    },
+    "C_Cpp.dimInactiveRegions": false
+}

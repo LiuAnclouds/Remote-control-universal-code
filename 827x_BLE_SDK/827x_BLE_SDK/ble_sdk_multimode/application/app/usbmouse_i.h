@@ -40,6 +40,9 @@
  0x85, 0x02, //report ID 02 mouse
  是否需要配置这个 , 1,2定义是否正确
  */
+
+
+/// @brief 鼠标设备HID报告格式和属性
 static const USB_Descriptor_HIDReport_Datatype_t mouse_report_desc[] = {
 #if 0
 	//每行开始的第一字节为该条目的前缀，前缀的格式为：
